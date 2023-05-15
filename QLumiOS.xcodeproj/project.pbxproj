@@ -7,18 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211753A62A11249E00E2C5CD /* libtiny_http_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 211753A52A11249E00E2C5CD /* libtiny_http_ios.a */; };
 		216B176B2A100FFE00680539 /* QLumiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B176A2A100FFE00680539 /* QLumiOSApp.swift */; };
 		216B176D2A100FFE00680539 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B176C2A100FFE00680539 /* ContentView.swift */; };
 		216B176F2A100FFF00680539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216B176E2A100FFF00680539 /* Assets.xcassets */; };
 		216B17722A100FFF00680539 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216B17712A100FFF00680539 /* Preview Assets.xcassets */; };
+		216B177B2A1010F700680539 /* QLumEdit.html in Resources */ = {isa = PBXBuildFile; fileRef = 216B177A2A1010F700680539 /* QLumEdit.html */; };
+		216B17802A10115000680539 /* QLumEdit.wasm in Resources */ = {isa = PBXBuildFile; fileRef = 216B177C2A10115000680539 /* QLumEdit.wasm */; };
+		216B17812A10115000680539 /* qtlogo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 216B177D2A10115000680539 /* qtlogo.svg */; };
+		216B17822A10115000680539 /* QLumEdit.js in Resources */ = {isa = PBXBuildFile; fileRef = 216B177E2A10115000680539 /* QLumEdit.js */; };
+		216B17832A10115000680539 /* qtloader.js in Resources */ = {isa = PBXBuildFile; fileRef = 216B177F2A10115000680539 /* qtloader.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		211753A52A11249E00E2C5CD /* libtiny_http_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiny_http_ios.a; sourceTree = "<group>"; };
 		216B17672A100FFE00680539 /* QLumiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLumiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		216B176A2A100FFE00680539 /* QLumiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLumiOSApp.swift; sourceTree = "<group>"; };
 		216B176C2A100FFE00680539 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		216B176E2A100FFF00680539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		216B17712A100FFF00680539 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		216B177A2A1010F700680539 /* QLumEdit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = QLumEdit.html; sourceTree = "<group>"; };
+		216B177C2A10115000680539 /* QLumEdit.wasm */ = {isa = PBXFileReference; lastKnownFileType = file; path = QLumEdit.wasm; sourceTree = "<group>"; };
+		216B177D2A10115000680539 /* qtlogo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = qtlogo.svg; sourceTree = "<group>"; };
+		216B177E2A10115000680539 /* QLumEdit.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = QLumEdit.js; sourceTree = "<group>"; };
+		216B177F2A10115000680539 /* qtloader.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = qtloader.js; sourceTree = "<group>"; };
+		216B179A2A10307C00680539 /* rust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rust.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,15 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				211753A62A11249E00E2C5CD /* libtiny_http_ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2117539A2A1036B700E2C5CD /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				216B177A2A1010F700680539 /* QLumEdit.html */,
+				216B177E2A10115000680539 /* QLumEdit.js */,
+				216B177C2A10115000680539 /* QLumEdit.wasm */,
+				216B177F2A10115000680539 /* qtloader.js */,
+				216B177D2A10115000680539 /* qtlogo.svg */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
 		216B175E2A100FFE00680539 = {
 			isa = PBXGroup;
 			children = (
+				216B17902A101E8400680539 /* Packages */,
 				216B17692A100FFE00680539 /* QLumiOS */,
 				216B17682A100FFE00680539 /* Products */,
 			);
@@ -51,6 +78,9 @@
 		216B17692A100FFE00680539 /* QLumiOS */ = {
 			isa = PBXGroup;
 			children = (
+				2117539A2A1036B700E2C5CD /* examples */,
+				216B179C2A10311500680539 /* libs */,
+				216B179B2A10309D00680539 /* include */,
 				216B176A2A100FFE00680539 /* QLumiOSApp.swift */,
 				216B176C2A100FFE00680539 /* ContentView.swift */,
 				216B176E2A100FFF00680539 /* Assets.xcassets */,
@@ -65,6 +95,29 @@
 				216B17712A100FFF00680539 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		216B17902A101E8400680539 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		216B179B2A10309D00680539 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				216B179A2A10307C00680539 /* rust.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		216B179C2A10311500680539 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				211753A52A11249E00E2C5CD /* libtiny_http_ios.a */,
+			);
+			path = libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +136,8 @@
 			dependencies = (
 			);
 			name = QLumiOS;
+			packageProductDependencies = (
+			);
 			productName = QLumiOS;
 			productReference = 216B17672A100FFE00680539 /* QLumiOS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +166,8 @@
 				Base,
 			);
 			mainGroup = 216B175E2A100FFE00680539;
+			packageReferences = (
+			);
 			productRefGroup = 216B17682A100FFE00680539 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +182,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216B17802A10115000680539 /* QLumEdit.wasm in Resources */,
 				216B17722A100FFF00680539 /* Preview Assets.xcassets in Resources */,
 				216B176F2A100FFF00680539 /* Assets.xcassets in Resources */,
+				216B177B2A1010F700680539 /* QLumEdit.html in Resources */,
+				216B17832A10115000680539 /* qtloader.js in Resources */,
+				216B17812A10115000680539 /* qtlogo.svg in Resources */,
+				216B17822A10115000680539 /* QLumEdit.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +324,7 @@
 		216B17762A100FFF00680539 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -270,27 +333,38 @@
 				DEVELOPMENT_TEAM = U4GT5CZ7J7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/QLumiOS/include";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QLumiOS/libs",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = trahe.eu.QLumiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator driverkit iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(PROJECT_DIR)/QLumiOS/include/rust.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 			};
 			name = Debug;
 		};
 		216B17772A100FFF00680539 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,16 +378,28 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QLumiOS",
+					"$(PROJECT_DIR)/QLumiOS/libs",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/QLumiOS/libs";
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = trahe.eu.QLumiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator driverkit iphoneos iphonesimulator macosx watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(PROJECT_DIR)/QLumiOS/include/rust.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 			};
 			name = Release;
 		};
